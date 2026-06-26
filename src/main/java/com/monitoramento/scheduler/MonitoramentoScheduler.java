@@ -41,10 +41,10 @@ public class MonitoramentoScheduler{
                         .retrieve()
                         .toBodilessEntity();
                     
-            System.out.println("OK" + url + "Está ONLINE.");        
+            System.out.println("OK " + url + "Está ONLINE.");        
             
             } catch (Exception e){
-                System.out.println("ERROR" + url + "Está OFFLINE! Motivo: " + e.getMessage());
+                System.out.println("ERROR!! " + url + "Está OFFLINE! Motivo: " + e.getMessage());
             
                 //Dispara o email de alerta imediatamente
                 notificacaoService.enviarAlertaQueda(url, e.getMessage());
